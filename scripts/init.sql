@@ -28,7 +28,7 @@ DECLARE
     customer_id INT;
     created_customers INT := 0;
 BEGIN
-    WHILE i <= 20 LOOP
+    WHILE i <= 50 LOOP
         INSERT INTO customers(first_name, last_name, email)
         VALUES ('Customer-' || i, 'Doe-' || i, 'customer.' || i || '@email.com')
         RETURNING id INTO customer_id;
